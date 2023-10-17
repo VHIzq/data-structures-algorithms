@@ -31,15 +31,28 @@ const primeNumber = (ele) => {
 //console.log(primeNumber(100))
 
 const perfectNumber = (number) => {
-  let acc = 0;
+  let acc = 1;
   for (let index = 1; index <= number; index++) {
     const isDivider = number % index === 0;
     console.log(index, isDivider);
     if (isDivider) {
       acc += index;
     }
-    const isPerfectNumber = acc === number;
-    return isPerfectNumber ? "Is perfect number" : "Not perfect number";
   }
+  const isPerfectNumber = acc === number;
+  return isPerfectNumber ? "Is perfect number" : "Not perfect number";
 };
-console.log(perfectNumber(28));
+
+const number = 28;
+const isPerfectNumber = perfectNumber(number);
+
+if (isPerfectNumber) {
+  console.log(`${number} is a perfect number`);
+} else {
+  console.log(`${number} is not a perfect number`);
+}
+
+
+const guayNumber = (number) => {
+  
+}
